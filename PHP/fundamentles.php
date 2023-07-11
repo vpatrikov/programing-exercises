@@ -39,3 +39,9 @@ function simpleMultiplication($number)
         return $number * 9;
     }
 }
+
+function stringToNumber($str)
+{
+    $integer = intval($str);
+    return $integer;
+}

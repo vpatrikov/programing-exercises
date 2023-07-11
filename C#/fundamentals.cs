@@ -53,6 +53,50 @@ namespace ConsoleApp1
             }
             return output;
         }
+
+        public static string AddBinary(int a, int b)
+        {
+            int decimalSum = a + b;
+            Console.WriteLine($"Decimal Sum: {decimalSum}");
+            string binarySum = Convert.ToString(decimalSum, 2);
+            return binarySum;
+        }   
+
+        public static int summation(int num)
+        {
+            List<int> list = new List<int>();
+
+            for (int i = 0; i < num + 1; i++)
+            {
+                list.Add(i);
+            }
+
+            int sum = 0;
+
+            foreach (int item in list)
+            {
+                sum += item;
+            }
+
+            return sum;
+        }
+
+        public static string Bmi(double weight, double height)
+        {
+            double bmi = weight / (height*height);
+
+            if (bmi <= 18.5) return "Underweight";
+            else if (bmi <= 25) return "Normal";
+            else if (bmi <= 30.0) return "Overweight";
+            else return "Obese";
+        }
+
+        public static int СenturyFromYear(int year)
+        {
+            double century = ((year - 1) / 100) + 1;
+            return Convert.ToInt32(century);
+        }
+        
         static void Main(string[] args)
         {
         }
