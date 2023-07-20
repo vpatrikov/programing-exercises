@@ -96,7 +96,30 @@ namespace ConsoleApp1
             double century = ((year - 1) / 100) + 1;
             return Convert.ToInt32(century);
         }
-        
+
+        public static int binToDec(string s)
+        {
+          int binary;
+          int.TryParse(s, out binary);
+          int decimalNum = Convert.ToInt32(binary.ToString(), 2);
+          return decimalNum;
+        }
+
+        public static int CountSmileys(string[] smileys)
+        {
+            int count = 0;
+            foreach (string item in smileys)
+            {
+                if (item == ":D" || item == ":)" || item == ";-D" ||
+                    item == ":~)" || item == ";~D" || item == ":-)" ||
+                    item == ";)" || item == ";-)" || item == ";D" ||
+                    item == ":~D" || item == ";~)" || item == ":-D")
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
         static void Main(string[] args)
         {
         }
