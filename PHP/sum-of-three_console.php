@@ -1,7 +1,6 @@
 <?php
 $elements = readline();
 $arr = explode(" ", $elements);
-$found = false;
 for ($i = 0; $i < count($arr); $i++) {
     for ($j = $i + 1; $j < count($arr); $j++) {
         $sum = $arr[$i] + $arr[$j];
