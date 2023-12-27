@@ -60,7 +60,7 @@ namespace ConsoleApp1
             Console.WriteLine($"Decimal Sum: {decimalSum}");
             string binarySum = Convert.ToString(decimalSum, 2);
             return binarySum;
-        }   
+        }
 
         public static int summation(int num)
         {
@@ -83,7 +83,7 @@ namespace ConsoleApp1
 
         public static string Bmi(double weight, double height)
         {
-            double bmi = weight / (height*height);
+            double bmi = weight / (height * height);
 
             if (bmi <= 18.5) return "Underweight";
             else if (bmi <= 25) return "Normal";
@@ -99,10 +99,10 @@ namespace ConsoleApp1
 
         public static int binToDec(string s)
         {
-          int binary;
-          int.TryParse(s, out binary);
-          int decimalNum = Convert.ToInt32(binary.ToString(), 2);
-          return decimalNum;
+            int binary;
+            int.TryParse(s, out binary);
+            int decimalNum = Convert.ToInt32(binary.ToString(), 2);
+            return decimalNum;
         }
 
         public static int CountSmileys(string[] smileys)
@@ -120,8 +120,26 @@ namespace ConsoleApp1
             }
             return count;
         }
-        static void Main(string[] args)
+
+        public static string Smash(string[] words)
         {
+            return Convert.ToString(words);
+        }
+
+        public static int Enough(int cap, int on, int wait)
+        {
+            return (on + wait <= cap) ? 0 : (on + wait) - cap;
+        }
+        public static string CountSheep(int n)
+        {
+            string str = "";
+
+            for (int i = 0; i < n; i++)
+            {
+                str += $"{i + 1} sheep...";
+            }
+
+            return str;
         }
     }
 }
