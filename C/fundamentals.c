@@ -30,19 +30,30 @@ int factorial(int number)
     return prod;
 }
 
-void reverse_string(string)
-{
-    char reverse_string[sizeof(string)]
+// void reverse_string(string)
+// {
+//     char reverse_string[sizeof(string)]
 
-    for (int i = 0; i < length; i++)
-    {
-        reversedString[i] = inputString[length - 1 - i];
-    }
-    printf("%s", reverse_string);
-}
+//     for (int i = 0; i < length; i++)
+//     {
+//         reversedString[i] = inputString[length - 1 - i];
+//     }
+     // printf("%s", reverse_string);
+// }
+
+char* position(char alphabet)
+{
+    static char result[50]; // Static array to hold the result string
+    int position = alphabet - 'a' + 1;
+
+    // Format the string directly into the static array
+    snprintf(result, sizeof(result), "Position of alphabet: %d", position);
+
+    return result;
+  }
+
 int main(void)
 {
-    factorial(5);
-    reverse_string("Hello World");
+    printf("%s", position('g'));
     return 0;
 }
