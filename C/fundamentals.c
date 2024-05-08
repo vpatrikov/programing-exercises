@@ -52,6 +52,13 @@ char* position(char alphabet)
     return result;
   }
 
+unsigned mango(unsigned quantity, unsigned price)
+{
+
+    unsigned paidQuantity = quantity - quantity / 3;
+    return paidQuantity * price;
+}
+
 int main(void)
 {
     printf("%s", position('g'));
