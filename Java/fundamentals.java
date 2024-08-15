@@ -10,8 +10,7 @@ public class fundamentals {
     }
 
     public static int[] countPositivesSumNegatives(int[] input) {
-        if(input == null || input.length == 0)
-        {
+        if (input == null || input.length == 0) {
             return new int[0];
         }
         int sum = 0;
@@ -23,7 +22,7 @@ public class fundamentals {
                 sum += i;
             }
         }
-        return new int [] {count, sum};
+        return new int[] { count, sum };
     }
 
     public static int[] invert(int[] array) {
@@ -31,5 +30,36 @@ public class fundamentals {
             array[i] *= -1;
         }
         return array;
-      }
+    }
+
+    public int countSheeps(Boolean[] arrayOfSheeps) {
+        int count = 0;
+        for (Boolean boolean1 : arrayOfSheeps) {
+            if (boolean1 != null && boolean1) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static boolean isDivisible(long n, long x, long y) {
+        return n % x == 0 && n % y == 0;
+    }
+
+    public static int[] digitize(long n) {
+        char[] n_char_arr = (Long.toString(n)).toCharArray();
+        int[] n_array = new int[n_char_arr.length];
+        for (int i = n_char_arr.length - 1; i >= 0; i--) {
+            n_array[n_char_arr.length - 1 - i] = Character.getNumericValue(n_char_arr[i]);
+        }
+
+        return n_array;
+    }
+
+    public static void main(String[] args) {
+        int[] array = digitize(35231);
+        for (int i : array) {
+            System.out.println(i);
+        }
+    }
 }
