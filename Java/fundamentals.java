@@ -56,10 +56,35 @@ public class fundamentals {
         return n_array;
     }
 
+    public static int[] countBy(int x, int n) {
+        int[] array = new int[n];
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = x * (i + 1);
+        }
+        return array;
+    }
+
     public static void main(String[] args) {
-        int[] array = digitize(35231);
+        int[] array = countBy(2, 5);
         for (int i : array) {
             System.out.println(i);
         }
+    }
+
+    public static boolean getXO(String str) {
+
+        int count_x = 0;
+        int count_o = 0;
+
+        char[] chars = str.toLowerCase().toCharArray();
+        for (char item : chars) {
+            if (item == 'x') {
+                count_x++;
+            } else if (item == 'o') {
+                count_o++;
+            }
+        }
+        return count_x == count_o;
     }
 }
