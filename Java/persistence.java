@@ -1,5 +1,5 @@
 public class persistence {
-    public static int persistence(long n) {
+    public static int persistence_ex(long n) {
         int count = 0;
     
         while (n >= 10) {

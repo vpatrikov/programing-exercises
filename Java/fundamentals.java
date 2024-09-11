@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 public class fundamentals {
 
     public static int[] between(int a, int b) {
@@ -65,11 +67,37 @@ public class fundamentals {
         return array;
     }
 
-    public static void main(String[] args) {
-        int[] array = countBy(2, 5);
-        for (int i : array) {
-            System.out.println(i);
+    static int round_up(double number, double division){
+        return (int)Math.round(number/division);
+    }
+
+    static boolean IsInteger(double number){
+        if (number % 1 == 0){
+            System.out.println(number % 1);
+            return true;
+        }else{
+            return false;
         }
+    }
+
+    public static boolean zeroFuel(double distanceToPump, double mpg, double fuelLeft) {
+        return (mpg*fuelLeft) >= distanceToPump;
+    }
+
+    public static int expressionsMatter(int a, int b, int c) {
+        return Math.max(
+                Math.max(
+                        Math.max(a + b + c, a * b * c),
+                        Math.max((a + b) * c, a * (b + c))
+                ),
+                Math.max(
+                        a + (b * c),
+                        (a * b) + c
+                )
+        );
+    }
+    public static void main(String[] args) {
+
     }
 
     public static boolean getXO(String str) {
