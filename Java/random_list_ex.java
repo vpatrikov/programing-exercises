@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class random_list_ex {
     public static void main(String[]args){
@@ -32,8 +33,9 @@ public class random_list_ex {
             System.out.print(" " + number);
         }
 
+        Collections.reverse(list);
         System.out.print("\nelements of the list reversed:");
-        for(int number : list.reversed()){
+        for(int number : list){
             System.out.print(" " + number);
         }
 
