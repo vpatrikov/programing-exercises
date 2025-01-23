@@ -3,7 +3,15 @@
         "xmemory": "cpp",
         "iostream": "cpp",
         "*.tcc": "cpp",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "array": "c",
+        "bitset": "c",
+        "string_view": "c",
+        "hash_map": "c",
+        "hash_set": "c",
+        "format": "c",
+        "initializer_list": "c",
+        "span": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
